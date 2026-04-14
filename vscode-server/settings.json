@@ -1,0 +1,24 @@
+{
+    "terminal.integrated.profiles.linux": {
+        "bash": null,
+        "tmux": {
+            "path": "bash",
+            "args": [
+                "-c",
+                "tmx2 new -ADs ${PWD##*/}"
+            ],
+            "icon": "terminal-tmux"
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "tmux",
+    "editor.formatOnSave": true,
+    "go.coverOnSave": true,
+    "go.coverageDecorator": {
+        "type": "gutter",
+        "coveredHighlightColor": "rgba(64,128,128,0.5)",
+        "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+        "coveredGutterStyle": "blockgreen",
+        "uncoveredGutterStyle": "blockred"
+    },
+    "go.coverOnSingleTest": true,
+}
