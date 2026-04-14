@@ -1,13 +1,18 @@
 {
     "terminal.integrated.profiles.linux": {
-        "bash": null,
+        "zsh": {
+            "path": "zsh",
+            "icon": "terminal" // This changes the regular zsh icon to a simple square
+        },
         "tmux": {
-            "path": "bash",
+            "path": "zsh",
             "args": [
+                "-i",
+                "-l",
                 "-c",
-                "tmx2 new -ADs ${PWD##*/}"
+                "/usr/bin/tmx2 new -ADs \"${PWD##*/}\" || exec zsh; exec zsh"
             ],
-            "icon": "terminal-tmux"
+            "icon": "terminal-tmux" // This keeps the 'grid' icon for tmux
         }
     },
     "terminal.integrated.defaultProfile.linux": "tmux",
