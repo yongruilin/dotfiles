@@ -10,7 +10,7 @@
                 "-i",
                 "-l",
                 "-c",
-                "/usr/bin/tmx2 new -ADs \"${PWD##*/}\" || exec zsh; exec zsh"
+                "(command -v tmx2 >/dev/null && tmx2 new -ADs \"${PWD##*/}\") || tmux new -ADs \"${PWD##*/}\" || exec zsh; exec zsh"
             ],
             "icon": "terminal-tmux" // This keeps the 'grid' icon for tmux
         }
